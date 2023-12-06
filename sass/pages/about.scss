@@ -1,0 +1,360 @@
+@use "../global";
+@use "../utils/helpers" as help;
+@use "../utils/mixins" as mxn;
+@use "../utils/variables" as var;
+@use "../base/fonts";
+@use "../layout/container";
+
+.container-1200 {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#loading {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+#loading.loading-none {
+    opacity: 0;
+    z-index: -1;
+}
+
+@keyframes ldio-t1hqtka5qyl-o {
+    0% {
+        opacity: 1;
+        transform: translate(0 0)
+    }
+
+    49.99% {
+        opacity: 1;
+        transform: translate(80px, 0)
+    }
+
+    50% {
+        opacity: 0;
+        transform: translate(80px, 0)
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0, 0)
+    }
+}
+
+@keyframes ldio-t1hqtka5qyl {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    50% {
+        transform: translate(80px, 0)
+    }
+
+    100% {
+        transform: translate(0, 0)
+    }
+}
+
+.ldio-t1hqtka5qyl div {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 60px;
+    left: 20px;
+}
+
+.ldio-t1hqtka5qyl div:nth-child(1) {
+    background: #000000;
+    animation: ldio-t1hqtka5qyl 1s linear infinite;
+    animation-delay: -0.5s;
+}
+
+.ldio-t1hqtka5qyl div:nth-child(2) {
+    background: #bb2339;
+    animation: ldio-t1hqtka5qyl 1s linear infinite;
+    animation-delay: 0s;
+}
+
+.ldio-t1hqtka5qyl div:nth-child(3) {
+    background: #000000;
+    animation: ldio-t1hqtka5qyl-o 1s linear infinite;
+    animation-delay: -0.5s;
+}
+
+.loadingio-spinner-dual-ball-tfq845nzp9 {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.ldio-t1hqtka5qyl {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+}
+
+.ldio-t1hqtka5qyl div {
+    box-sizing: content-box;
+}
+
+#backtop {
+    position: fixed;
+    bottom: -50px;
+    right: -50px;
+    border-radius: 50%;
+    padding: 10px 20px;
+    background-color: var.$primary-color;
+    transition: 1s;
+    cursor: pointer;
+    z-index: 5;
+}
+
+#backtop i {
+    font-size: 25px;
+    color: white;
+}
+
+#backtop.backtop-show {
+    bottom: 50px;
+    right: 50px;
+}
+
+#navigator.navbar-shrink {
+    height: 60px;
+    box-shadow: 0 0 5px 5px black;
+}
+
+#navigator {
+    height: 100px;
+    background: var.$primary-color;
+    transition: 0.5s;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link {
+    @extend %title-4;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
+
+.nav-btn {
+    border: 3px solid white;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 50px;
+    transition: 0.5s;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
+
+.nav-btn:hover {
+    border: 3px solid black;
+    background: black;
+    color: var.$primary-color;
+}
+
+#offcanvasDarkNavbar {
+    background: var.$primary-color;
+}
+
+#breadcrumb {
+    padding-top: 130px;
+}
+
+.breadcrumb-item a {
+    color: var.$primary-color;
+    text-decoration: none;
+}
+
+#info{
+    padding-top: 50px;
+}
+
+.info{
+    width: 100%;
+    &__top{
+        text-align: center;
+        padding-bottom: 40px;
+        h1{
+            @extend %title-1;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 500;
+            text-align: center;
+        }
+        p{
+            @extend %text;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: start;
+            padding-top: 20px;
+        }
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+    }
+}
+
+#letter {
+    padding-top: 180px;
+    position: relative;
+}
+
+.letter {
+    width: 100%;
+
+    &__info {
+        display: inline-flex;
+        padding: 60px 250px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var.$primary-color;
+        border-radius: 50px;
+        box-shadow: 0 0 5px 5px black;
+        position: absolute;
+        top: -1px;
+        margin-left: auto;
+        margin-right: auto;
+
+        h4 {
+            @extend %title-6;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 700;
+            color: white;
+        }
+
+        h1 {
+            @extend %title-3;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 500;
+            color: white;
+        }
+
+        p {
+            @extend %text;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 400;
+            color: white;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        input {
+            padding: 10px;
+            width: 100%;
+            border-radius: 15px;
+            border: 2px solid black;
+            background-color: var.$primary-color;
+        }
+
+        button {
+            width: 150px;
+            height: 47px;
+            border-radius: 20px;
+            border: 2px solid black;
+            background: var.$primary-color;
+            color: white;
+        }
+    }
+}
+
+input::placeholder {
+    color: white;
+}
+
+footer {
+    background: var.$primary-color;
+    padding-top: 200px;
+}
+
+.footer {
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__item {
+        color: white;
+        @extend %title-6;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+    }
+
+    &__item-1 {
+        color: white;
+        @extend %text;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    &__bottom {
+        p {
+            text-align: center;
+            color: white;
+            @extend %text;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 400;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+.footer__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer__item img {
+    width: 200px;
+    height: 100px;
+}
+
+@media (min-width: 700px) {
+    .footer__all {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 130px;
+    }
+}

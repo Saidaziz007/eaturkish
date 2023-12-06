@@ -1,0 +1,7 @@
+@mixin title($size, $height, $spacing: 0) {
+    font-size: $size + px;
+    font-weight: 700;
+    line-height: $height + px;
+    letter-spacing: $spacing + px;
+    text-transform: uppercase;
+}
